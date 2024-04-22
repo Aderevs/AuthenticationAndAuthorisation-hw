@@ -4,5 +4,16 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @if (String.IsNullOrEmpty(Model))
+    {
+        <p>
+            You can't do anything without the registration or authorization so...
+        </p>
+        <a asp-action="SignIn" , asp-controller="Account">Sign in</a>
+        <a asp-action="SignUp" , asp-controller="Account">Sign up</a>
+    }
+    else
+    {
+        <h2 class="display-4">@Model</h2>
+    }
 </div>

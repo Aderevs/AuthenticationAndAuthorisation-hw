@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>AuthenticationAndAuthorisation_hw</RootNamespace>
+    <RootNamespace>AuthenticationAndAuthorization_hw</RootNamespace>
   </PropertyGroup>
 
 </Project>

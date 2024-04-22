@@ -1,4 +1,4 @@
-namespace AuthenticationAndAuthorisation_hw.Models
+namespace AuthenticationAndAuthorization_hw.Models
 {
     public class ErrorViewModel
     {

@@ -1,0 +1,23 @@
+﻿@model List<AuthenticationAndAuthorization_hw.Logic.Notes.Note>
+@{
+    ViewData["Title"] = "Registration Page";
+}
+<div class="display-notes">
+@if (Model.Any())
+{
+
+    foreach(var note in Model)
+    {
+        <div>
+            <h4>@note.Tittle</h4>
+            <br />
+            <p>@note.Content</p>
+        </div>
+        
+    }
+}
+else
+{
+    <h2>You've not created any notes yet</h2>
+}
+</div>

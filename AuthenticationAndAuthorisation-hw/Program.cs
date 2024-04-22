@@ -1,6 +1,9 @@
-namespace AuthenticationAndAuthorisation_hw
+using AuthenticationAndAuthorization_hw.Logic;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
+namespace AuthenticationAndAuthorization_hw
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
@@ -8,7 +11,12 @@ namespace AuthenticationAndAuthorisation_hw
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/account/signIn";
+                });
+            builder.Services.AddSingleton<PseudoDatabase>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

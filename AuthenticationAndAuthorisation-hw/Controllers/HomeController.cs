@@ -1,8 +1,8 @@
-using AuthenticationAndAuthorisation_hw.Models;
+using AuthenticationAndAuthorization_hw.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace AuthenticationAndAuthorisation_hw.Controllers
+namespace AuthenticationAndAuthorization_hw.Controllers
 {
     public class HomeController : Controller
     {
@@ -15,7 +15,7 @@ namespace AuthenticationAndAuthorisation_hw.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(User.Identity.Name as object);
         }
 
         public IActionResult Privacy()
